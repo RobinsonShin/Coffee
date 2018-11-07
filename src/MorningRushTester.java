@@ -15,20 +15,25 @@ public class MorningRushTester
     
     public static void main(String[] args)
     {
+        final int initialGulps = 5;
+        
         class DrinkCoffee implements ActionListener
         {
             private int gulps;
-            
-            final int initialGulps = 5;
             
             public DrinkCoffee(int inGulps)
             {
                 gulps = inGulps;
             }
             
+            public int gulps()
+            {
+                return gulps;
+            }
+            
             public void actionPerformed(ActionEvent event)
             {
-                if(gulps >= 0)
+                if(gulps > 0)
                 {
                     System.out.println(gulps);
                 }
